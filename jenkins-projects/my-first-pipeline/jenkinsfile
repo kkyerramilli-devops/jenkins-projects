@@ -8,28 +8,5 @@ pipeline {
         sh 'node --version'
       }
     }
-
-    stage('Build') {
-      steps {
-        echo 'Building..'
-        //Add your build commands here
-        sh 'make build'
-      }
-    }
-
-    stage('Test') {
-      steps {
-        echo 'Testing..'
-        //Add your test commands here
-        sh 'make test'
-      }
-    }  
-    stage('deploy'){
-      steps {
-        echo 'Deploying..'
-        //Add your deploy commands here
-        sh 'make deploy'
-      }
-    }
   }
-}  
+}
